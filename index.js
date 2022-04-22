@@ -16,7 +16,7 @@ function myFunction() {
 //myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
+//Internal can be accessed by nestedFunction() because both of them are within the myFunction() scope.
 
 
 
@@ -30,9 +30,12 @@ function myFunction() {
 💡 NOTE: you may use a for loop for this function if you wish 
 */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
+function summation(num) {
+  let sum = 0;
+  for(var i = 0; i <= num; i++){
 
+  sum += i }
+  return sum;
   }
  
 
@@ -60,10 +63,15 @@ const zooAnimals = [
   💡 NOTE: the array returned should be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+  function animalNames(arr){
+    const displayNames = [];
   
+      arr.forEach((item) => {
+       displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`) 
+    });
+    return displayNames;
+    
+  }
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -75,8 +83,16 @@ const zooAnimals = [
   💡 NOTE: Do some research for other methods that can help help you
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(arr){
+    const filter = arr.filter((animal_name) => {
+      return animal_name
+    })
+    const map = filter.map((animal_name) => {
+      const lowerNames = animal_name.toLowerCase();
+      animal_name = lowerNames;
+      return animal_name;
+    });
+    
   }
   
   
